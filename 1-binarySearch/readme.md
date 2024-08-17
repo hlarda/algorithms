@@ -2,7 +2,14 @@
 
 ## Table of Contents
 
-- [Definition](#definition)
+- [Binary Search](#binary-search)
+  - [Table of Contents](#table-of-contents)
+  - [What is Binary Search?](#what-is-binary-search)
+  - [Conditions to applay Binary Search](#conditions-to-applay-binary-search)
+  - [Algorithm](#algorithm)
+  - [In C++, which data structures can be used to apply Binary Search (assuming constant-time access)?](#in-c-which-data-structures-can-be-used-to-apply-binary-search-assuming-constant-time-access)
+  - [Implementation](#implementation)
+  - [Complexity](#complexity)
 
 ## What is Binary Search?
 
@@ -20,6 +27,7 @@
   - If not:
     - If the target value is less than the middle element, repeat the search on the left subarray.
     - If the target value is greater than the middle element, repeat the search on the right subarray.
+- Repeat the process until the target value is found or the subarray is empty.
 
 ## In C++, which data structures can be used to apply Binary Search (assuming constant-time access)?
 
@@ -31,7 +39,11 @@ Arrays and vectors can be used to apply binary search because they provide const
 - `std::map` provides logarithmic time complexity (O(log n)) for search operations, not constant time, due to its underlying balanced tree structure.
 - `std::unordered_map` provides average constant-time complexity (O(1)) for access, but it does not support binary search because it stores elements in an unsorted manner.
 
-## Im`plementation
+## Implementation
 
-1. [Iterative](./binary-search-iterative.cpp).
-2. [Recursive](./binary-search-recursive.cpp).
+in [binarySearch.cpp](binarySearch.cpp) implemented binary search algorithm within class contains two methods, one for the iterative approach and the other for the recursive approach.
+
+## Complexity
+
+- Time complexity: O(log n)
+- Space complexity: O(1)
